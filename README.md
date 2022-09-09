@@ -1,1 +1,1 @@
-# Generic-Electrical-Energy-Cost-Calculator
+# Generic Electrical Energy Cost Calculator

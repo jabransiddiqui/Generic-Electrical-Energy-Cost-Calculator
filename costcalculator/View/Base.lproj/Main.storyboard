@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VVh-bX-R61">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cost Calculation View Controller-->
+        <scene sceneID="Aqa-Eg-Pj2">
+            <objects>
+                <viewController id="VVh-bX-R61" customClass="CostCalculationViewController" customModule="costcalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aQ6-Dd-9px">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-bg-e9n">
+                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qH-P8-abH">
+                                        <rect key="frame" x="5" y="5" width="384" height="788"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZmL-cf-8C6">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="465.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generic Electrical Energy Cost Calculator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcS-Ac-F98">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="55"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Serial Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFH-n7-Nos" customClass="ACFloatingTextfield" customModule="costcalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="65" width="384" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ldi-w8-Nx5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                <color key="value" systemColor="linkColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedPlaceHolderColor">
+                                                                <color key="value" systemColor="linkColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                                <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                                <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="VVh-bX-R61" id="xlS-ld-uN6"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Reading" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msu-46-FJY" customClass="ACFloatingTextfield" customModule="costcalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="115" width="384" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="sxb-82-ryJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                <color key="value" systemColor="linkColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedPlaceHolderColor">
+                                                                <color key="value" systemColor="linkColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                                <color key="value" systemColor="systemRedColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                                                <color key="value" systemColor="systemRedColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="VVh-bX-R61" id="MOq-8G-cDW"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPD-nW-3KL">
+                                                        <rect key="frame" x="0.0" y="165" width="384" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="V1x-jK-cYl"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="Submit"/>
+                                                        <connections>
+                                                            <action selector="submitBtnTap:" destination="VVh-bX-R61" eventType="touchUpInside" id="OIq-nu-y1v"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QCL-Jy-xbM">
+                                                        <rect key="frame" x="0.0" y="215" width="384" height="110"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oah-vu-A6i">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <color key="textColor" systemColor="linkColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-of-XRY">
+                                                                <rect key="frame" x="0.0" y="30.5" width="384" height="19.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-30-TiY">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                        <color key="textColor" systemColor="linkColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue8-mH-CA3">
+                                                                        <rect key="frame" x="349" y="0.0" width="35" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                        <color key="textColor" systemColor="linkColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2gR-Wb-XxC">
+                                                                <rect key="frame" x="0.0" y="60" width="384" height="50"/>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-M8-Yxo">
+                                                        <rect key="frame" x="0.0" y="335" width="384" height="130.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculation breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-a3-D7Z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <color key="textColor" systemColor="linkColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eaH-nC-gTT">
+                                                                <rect key="frame" x="0.0" y="30.5" width="384" height="50"/>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR4-8u-Ezu">
+                                                                <rect key="frame" x="0.0" y="90.5" width="384" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="Bs1-S6-CX7"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="SAVE"/>
+                                                                <connections>
+                                                                    <action selector="saveBtnTap:" destination="VVh-bX-R61" eventType="touchUpInside" id="l05-BI-nac"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZmL-cf-8C6" firstAttribute="width" secondItem="8qH-P8-abH" secondAttribute="width" id="1Xt-bg-Gy9"/>
+                                            <constraint firstItem="ZmL-cf-8C6" firstAttribute="top" secondItem="8qH-P8-abH" secondAttribute="top" id="MzN-L7-r3R"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZmL-cf-8C6" secondAttribute="bottom" id="OGU-UR-oi4"/>
+                                            <constraint firstItem="ZmL-cf-8C6" firstAttribute="trailing" secondItem="8qH-P8-abH" secondAttribute="trailing" id="Ypq-5a-HAO"/>
+                                            <constraint firstItem="ZmL-cf-8C6" firstAttribute="leading" secondItem="8qH-P8-abH" secondAttribute="leading" id="xqE-2S-Txp"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8qH-P8-abH" firstAttribute="leading" secondItem="llJ-bg-e9n" secondAttribute="leading" constant="5" id="GLx-D3-WtO"/>
+                                    <constraint firstAttribute="trailing" secondItem="8qH-P8-abH" secondAttribute="trailing" constant="5" id="JDQ-2s-mOT"/>
+                                    <constraint firstAttribute="bottom" secondItem="8qH-P8-abH" secondAttribute="bottom" constant="5" id="RgN-hf-nla"/>
+                                    <constraint firstItem="8qH-P8-abH" firstAttribute="top" secondItem="llJ-bg-e9n" secondAttribute="top" constant="5" id="fOd-sE-Ug3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8n3-4V-l8n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8n3-4V-l8n" firstAttribute="trailing" secondItem="llJ-bg-e9n" secondAttribute="trailing" constant="10" id="8Le-F3-ORG"/>
+                            <constraint firstItem="llJ-bg-e9n" firstAttribute="leading" secondItem="8n3-4V-l8n" secondAttribute="leading" constant="10" id="PLI-Kc-2p5"/>
+                            <constraint firstItem="8n3-4V-l8n" firstAttribute="bottom" secondItem="llJ-bg-e9n" secondAttribute="bottom" constant="10" id="Pfw-k9-Cal"/>
+                            <constraint firstItem="llJ-bg-e9n" firstAttribute="top" secondItem="8n3-4V-l8n" secondAttribute="top" constant="10" id="iJx-3q-ShG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calcluationStack" destination="eaH-nC-gTT" id="yCg-D7-sSx"/>
+                        <outlet property="calcluationStackView" destination="Ioe-M8-Yxo" id="RFI-Io-jCl"/>
+                        <outlet property="historyStack" destination="2gR-Wb-XxC" id="Jxo-Rx-BmT"/>
+                        <outlet property="historyStackView" destination="QCL-Jy-xbM" id="N9J-6M-B2e"/>
+                        <outlet property="txtCurrentReading" destination="msu-46-FJY" id="8Fo-Q9-ByC"/>
+                        <outlet property="txtSerialNumber" destination="YFH-n7-Nos" id="rO5-Vr-dhu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXJ-PW-XJn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="72"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="YFH-n7-Nos">
+            <size key="intrinsicContentSize" width="92" height="18.5"/>
+        </designable>
+        <designable name="msu-46-FJY">
+            <size key="intrinsicContentSize" width="105.5" height="18.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
