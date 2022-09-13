@@ -22,11 +22,11 @@ protocol CostCalculationService {
 class CostCalculationServiceDelegate : CostCalculationService {
     
     private final let slabTabe  = [
-        // ["slabLowerLimit": 1, "slabUperLimit":100,  "rate": 5],
         ["range": 1...100 , "rate": 5],
-        ["range": (101...500), "rate": 11],
-        ["range": 501...Int.max, "rate": 12],
+        ["range": 101...500, "rate": 8],
+        ["range": 501...Int.max, "rate": 10]
     ]
+    
     private final var history : [HistoryModel] = [
         HistoryModel(serialNumber : "1234567890", units : 5, cost: 25),
     ]
@@ -103,7 +103,7 @@ class CostCalculationServiceDelegate : CostCalculationService {
             // Units to be consumed in current Itteration
             let canConsumedUnit =  (i != (slabTabe.count - 1)) ? ((maxValue - minValue) + 1) : units - breakdownOfUnits
             var unitToBeConsumed = 0
-            unitToBeConsumed = (canConsumedUnit > units) ? units : (units - canConsumedUnit == 0) ? units : canConsumedUnit > units - breakdownOfUnits ? units - breakdownOfUnits : canConsumedUnit
+            unitToBeConsumed = (canConsumedUnit > units) ? (units - breakdownOfUnits) : (units - canConsumedUnit == 0) ? units : (canConsumedUnit > units - breakdownOfUnits) ? (units - breakdownOfUnits) : canConsumedUnit
             let cost = rate * unitToBeConsumed
             totalBill = totalBill + cost
             bill.append(CostCalculationModel(serialNumber : "\(unitToBeConsumed)x\(rate)", value: cost))
